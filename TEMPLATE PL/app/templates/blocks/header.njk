@@ -1,0 +1,33 @@
+{%- import "../components/macro.njk" as macro with context -%}
+{%- set headerTitle = 'inteligentne rozwiązania na co dzień' -%}
+{%- if lang.ru -%}
+  {%- set headerLink = links.ruIcons -%}
+{% elif lang.us %}
+  {%- set headerLink = links.us -%}
+{% elif lang.uk %}
+  {%- set headerLink = links.uk -%}
+{% elif lang.es %}
+  {%- set headerLink = links.es -%}
+{% elif lang.it %}
+  {%- set headerLink = links.it -%}
+{% elif lang.de %}
+  {%- set headerLink = links.de -%}
+{% elif lang.pl %}
+  {%- set headerLink = links.pl -%}
+{%- else -%}
+  {%- set headerLink = links.fr -%}
+{%- endif -%}
+{#- <section class="layout-header">
+    {{ macro.image(modelName + '-header-desc.jpg', modelName + '-header-mob.jpg', headerTitle, 'layout-header__img') }}
+    <h2 class="layout-header__title">{{ headerTitle|safe }}</h2>
+    <p class="layout-header__subtitle"><img src="{{ links.ruIcons + 'onkron.svg' }}" alt="onkron" />- умные решения на каждый день</p>
+  </section> -#}
+<section class="layout-header">
+  {{ macro.image(modelName + '-header-desc.jpg', modelName + '-header-mob.jpg', headerTitle, 'layout-header__img') }}
+  <div class="layout-header__content-wrap">
+    {#-<img class="layout-header__logo" src="{{ headerLink + 'onkron.svg' }}" alt="onkron"/>
+    <p class="layout-header__title">{{ headerTitle|safe }}</p>
+     <p class="layout-header__subtitle"> - умные решения на каждый день</p> -#}
+    {% include "./icons.njk" %}
+  </div>
+</section>

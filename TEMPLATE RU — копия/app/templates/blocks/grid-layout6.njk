@@ -1,0 +1,51 @@
+{%- import "../components/macro.njk" as macro with context -%}
+
+{%- set items = [
+  {
+    imgDesc: modelName + '-grid5-desc.webp',
+    imgMob: modelName + '-grid5-mob.webp',
+    title: 'Две полки для дополнительного оборудования'
+  },
+  {
+    imgDesc: modelName + '-grid6-desc.webp',
+    imgMob: modelName + '-grid6-mob.webp',
+    title: 'Высококачественные прорезиненные колеса'
+  },
+  {
+    imgDesc: modelName + '-grid7-desc.webp',
+    imgMob: modelName + '-grid7-mob.webp',
+    title: 'Внутренний кабель-менеджмент'
+  },
+  {
+    imgDesc: modelName + '-grid8-desc.webp',
+    imgMob: modelName + '-grid8-mob.webp',
+    title: 'В комплекте есть все необходимое для установки'
+  },
+  {
+    imgDesc: modelName + '-grid9-desc.webp',
+    imgMob: modelName + '-grid9-mob.webp',
+    title: 'Легкая и быстрая сборка'
+  },
+  {
+    imgDesc: modelName + '-grid10-desc.webp',
+    imgMob: modelName + '-grid10-mob.webp',
+    title: 'Регулируемые по высоте колонны'
+  }
+]-%}
+
+{#- section.grid-layout
+  each item in itemsGrid
+    div(class='grid-layout__grid-item grid-item')
+      +images(item.imgMob, item.imgDesc, 'full-img__img', item.title)
+      h5.grid-item__title !{item.title} -#}
+
+<section class="grid-layout6">
+  {%- for item in items -%}
+    <div class="grid-layout6__grid-item grid-item6">
+      {{ macro.image(item.imgDesc, item.imgMob, item.title, 'full-img__img') }}
+      {%- if item.title -%}
+        <h5 class="grid-item6__title">{{ item.title | safe }}</h5>
+      {%- endif -%}
+    </div>
+  {%- endfor -%}
+</section>

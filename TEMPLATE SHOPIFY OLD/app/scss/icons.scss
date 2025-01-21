@@ -1,0 +1,94 @@
+.layout-icons {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box !important;
+  padding: 0 8% !important;
+  width: 100%;
+  list-style-type: none;
+  gap: 10px;
+  margin: 0 !important;
+  margin-top: 20% !important;
+  margin-bottom: 0 !important;
+
+  .layout-icons__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // width: calc(100% / 6);
+    margin: 0 !important;
+    @media screen and (max-width: $mob) {
+      &:nth-child(2n) {
+        margin-top: clamp(3.75em, 10vw + 0.75em, 9.75em) !important;
+      }
+    }
+
+    // &:nth-child(3) {
+    //   .item__img-wrapper {
+    //     padding: 0 !important;
+    //     margin-left: 18% !important;
+    //   }
+    // }
+
+    .item__img-wrapper {
+      height: clamp(2.375em, 6.354vw + 1.104em, 6.188em);
+      box-sizing: border-box;
+      .item__img {
+        height: 100%;
+      }
+    }
+
+    .item__title {
+      text-align: center;
+      font-size: clamp(0.25em, 1.354vw - 0.021em, 1.063em);
+      color: #fff;
+      margin: size(20) 0 !important;
+      font-weight: 400;
+      z-index: 99;
+    }
+
+    .item__desc {
+      font-size: clamp(0.25em, 1.354vw - 0.021em, 1.063em);
+    }
+  }
+}
+
+// @media screen and (max-width: $mob) {
+//   .layout-icons {
+//     display: grid;
+//     justify-content: normal;
+//     justify-items: center;
+//     align-items: center;
+//     grid-template-columns: repeat(2, 40%);
+//     justify-content: space-between;
+//     grid-template-areas:
+//       "age age"
+//       "worldwide number"
+//       "production quality";
+
+//     .layout-icons__item {
+//       &:nth-child(2n) {
+//         margin-top: 0;
+//       }
+
+//       &:nth-child(1) {
+//         grid-area: production;
+//       }
+
+//       &:nth-child(2) {
+//         grid-area: worldwide;
+//       }
+
+//       &:nth-child(3) {
+//         grid-area: age;
+//       }
+
+//       &:nth-child(4) {
+//         grid-area: number;
+//       }
+
+//       &:nth-child(5) {
+//         grid-area: quality;
+//       }
+//     }
+//   }
+// }

@@ -1,0 +1,23 @@
+{%- if lang.ru -%}
+  {% set imgLink = links.ru + folderName %}
+{% elif lang.us %}
+  {%- set imgLink = links.us -%}
+{% elif lang.uk %}
+  {%- set imgLink = links.uk -%}
+{% elif lang.es %}
+  {%- set imgLink = links.es -%}
+{% elif lang.it %}
+  {%- set imgLink = links.it -%}
+{% elif lang.de %}
+  {%- set imgLink = links.de -%}
+{% elif lang.pl %}
+  {%- set imgLink = links.pl -%}
+{%- else -%}
+  {% set imgLink = links.fr %}
+{%- endif -%}
+{%- macro image(imgDesc, imgMob, alt, class) -%}
+  <picture>
+    <source srcset="{{ imgLink + imgMob }}" media="(max-width: 480px)"/>
+    <img class="{{ class }}" src="{{ imgLink + imgDesc }}" alt="{{ alt | safe | replace('<br>',' ') }}"  title="{{ alt | safe | replace('<br>',' ') }}"/>
+  </picture>
+{%- endmacro -%}

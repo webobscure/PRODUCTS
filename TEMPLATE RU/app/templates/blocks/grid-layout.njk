@@ -1,0 +1,51 @@
+{%- import "../components/macro.njk" as macro with context -%}
+
+{%- set items = [
+  {
+    imgDesc: modelName + '-grid1-desc.webp',
+    imgMob: modelName + '-grid1-mob.webp',
+    title: "Grand angle de vision"
+  },
+  {
+    imgDesc: modelName + '-grid2-desc.webp',
+    imgMob: modelName + '-grid2-mob.webp',
+    title: "Mode vertical"
+  },
+  {
+    imgDesc: modelName + '-grid3-desc.webp',
+    imgMob: modelName + '-grid3-mob.webp',
+    title: "Plusieurs options de fixation VESA"
+  },
+  {
+    imgDesc: modelName + '-grid4-desc.webp',
+    imgMob: modelName + '-grid4-mob.webp',
+    title: "Goulotte de câble intégrée"
+  },
+  {
+    imgDesc: modelName + '-grid5-desc.webp',
+    imgMob: modelName + '-grid5-mob.webp',
+    title: "Ajustement mécanique<br>au poids du moniteur"
+  },
+  {
+    imgDesc: modelName + '-grid6-desc.webp',
+    imgMob: modelName + '-grid6-mob.webp',
+    title: "Deux options de fixation"
+  }
+]-%}
+
+{#- section.grid-layout
+  each item in itemsGrid
+    div(class='grid-layout__grid-item grid-item')
+      +images(item.imgMob, item.imgDesc, 'full-img__img', item.title)
+      h5.grid-item__title !{item.title} -#}
+
+<section class="grid-layout">
+  {%- for item in items -%}
+    <div class="grid-layout__grid-item grid-item">
+      {{ macro.image(item.imgDesc, item.imgMob, item.title, 'full-img__img') }}
+      {#- {%- if item.title -%}
+        <h5 class="grid-item__title">{{ item.title | safe }}</h5>
+      {%- endif -%} -#}
+    </div>
+  {%- endfor -%}
+</section>

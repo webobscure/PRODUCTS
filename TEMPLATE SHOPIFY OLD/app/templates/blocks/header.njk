@@ -1,0 +1,28 @@
+{%- import "../components/macro.njk" as macro with context -%}
+
+{%- set headerTitle = 'R4 Roto - A smart way to create more space' -%}
+
+{%- if lang.ru -%}
+  {%- set headerLink = links.ruIcons -%}
+{% elif lang.us %}
+  {%- set headerLink = links.us -%}
+{% elif lang.uk %}
+  {%- set headerLink = links.uk -%}
+{% elif lang.es %}
+  {%- set headerLink = links.es -%}
+{% elif lang.it %}
+  {%- set headerLink = links.it -%}
+{% elif lang.de %}
+  {%- set headerLink = links.de -%}
+  {% elif lang.pl %}
+  {%- set headerLink = links.pl -%}
+{%- else -%}
+  {%- set headerLink = links.fr -%}
+{%- endif -%}
+
+<section class="layout-header">
+    {{ macro.image(modelName + '-header-desc.jpg', modelName + '-header-mob.jpg', headerTitle, 'layout-header__img') }}
+    {% include "./icons.njk" %}
+
+  </section> 
+

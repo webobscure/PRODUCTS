@@ -1,0 +1,53 @@
+
+{%- set icons = [
+  {
+    img: 'fabric-icon.svg',
+    title: 'Собственное <br>
+производство'
+  },
+  {
+    img: 'world-icon.svg',
+    title: 'Представительства <br> 
+по всему миру'
+  },
+   {
+    img: 'warranty-icon.svg',
+    title: 'Гарантия'
+  }, 
+   {
+    img: 'tv-icon.svg',
+    title: 'ТВ-стойки под<br>
+любую задачу'
+  },
+  {
+    img: 'award-icon.svg',
+    title: "Многоступенчатый <br>
+контроль качества"
+  }
+] -%}
+
+<ul class="layout-icons">
+  {%- for icon in icons -%}
+    <li class="layout-icons__item">
+      <div class="item__img-wrapper">
+        {%- if lang.ru -%}
+          <img src="{{ links.ruIcons + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />
+        {% elif lang.us %}
+          <img src="{{ links.us + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />
+        {% elif lang.uk %}
+          <img src="{{ links.uk + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />
+        {% elif lang.it %}
+          <img src="{{ links.it + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />
+        {% elif lang.es %}
+          <img src="{{ links.es + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />
+        {% elif lang.de %}
+          <img src="{{ links.de + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />
+        {%- else -%}
+          <img src="{{ links.fr + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />
+        {%- endif -%}
+      </div>
+      <h3 class="item__title">{{ icon.title | safe }}</h3>
+      {#- <span class="item__desc">{{ icon.desc | safe }}</span> -#}
+    </li>
+  {%- endfor -%}
+</ul>

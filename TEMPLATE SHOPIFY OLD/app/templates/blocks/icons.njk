@@ -1,0 +1,67 @@
+
+{%- set icons = [
+  {
+    img: 'vesa-icon.svg',
+    title: 'VESA',
+    desc: '75x75 - 100x100'
+  },
+  {
+    img: 'load-icon.svg',
+    title: 'Max load',
+    desc: '20 kg'
+  },
+  {
+    img: 'wall-icon.svg',
+    title: 'Wall distance',
+    desc: '8 - 42 cm'
+  },
+  {
+    img: 'swivel-icon.svg',
+    title: 'Swivel',
+    desc: '180°'
+  },
+   {
+    img: 'rotation-icon.svg',
+    title: 'Rotation',
+    desc: '360°'
+  },
+  {
+    img: 'tilt-icon.svg',
+    title: 'Tilt',
+    desc: '+8° ~ -8°'
+  },
+  {
+    img: 'diagonal-icon.svg',
+    title: 'TV size',
+    desc: '10"– 35"'
+  }
+] -%}
+
+<ul class="layout-icons">
+  {%- for icon in icons -%}
+    <li class="layout-icons__item">
+      <div class="item__img-wrapper">
+        {%- if lang.ru -%}
+          <img src="{{ links.ruIcons + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />
+        {% elif lang.us %}
+          <img src="{{ links.us + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />
+        {% elif lang.uk %}
+          <img src="{{ links.uk + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />
+        {% elif lang.it %}
+          <img src="{{ links.it + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />
+        {% elif lang.es %}
+          <img src="{{ links.es + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />
+        {% elif lang.de %}
+          <img src="{{ links.de + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />
+        {% elif lang.pl %}
+          <img src="{{ links.pl + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />  
+        {%- else -%}
+          <img src="{{ links.fr + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />
+        {%- endif -%}
+      </div>
+
+      <h3 class="item__title">{{ icon.title | safe }}</h3>
+      <span class="item__desc">{{ icon.desc | safe }}</span> 
+    </li>
+  {%- endfor -%}
+</ul>

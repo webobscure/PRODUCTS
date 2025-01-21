@@ -1,0 +1,25 @@
+{
+  "lang": {
+    "us": false,
+    "uk": true,
+    "ru": false,
+    "fr": false,
+    "de": false,
+    "es": false,
+    "it": false,
+    "pl": false
+  },
+  "modelName": "d208e-b",
+  "folderName": "n2l-b-imgs/",
+  "links": {
+    "ruIcons": "https://shop.onkron.ru/images/content/new_listings/icons/",
+    "us": "https://cdn.shopify.com/s/files/1/2223/8189/files/",
+    "uk": "https://cdn.shopify.com/s/files/1/0558/2277/8562/files/",
+    "ru": "https://shop.onkron.ru/images/content/new_listings/",
+    "fr": "https://cdn.shopify.com/s/files/1/0012/5924/1550/files/",
+    "de": "https://cdn.shopify.com/s/files/1/0031/6860/0153/files/",
+    "es": "https://cdn.shopify.com/s/files/1/0079/2254/8809/files/",
+    "it": "https://cdn.shopify.com/s/files/1/0816/5589/0267/files/",
+    "pl": "https://cdn.shopify.com/s/files/1/0783/6467/2329/files/"
+  }
+}

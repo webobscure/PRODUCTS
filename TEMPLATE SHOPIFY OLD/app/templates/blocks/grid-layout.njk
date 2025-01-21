@@ -1,0 +1,51 @@
+{%- import "../components/macro.njk" as macro with context -%}
+
+{%- set items = [
+  {
+    imgDesc: modelName + '-grid1-desc.jpg',
+    imgMob: modelName + '-grid1-mob.jpg',
+    title: "Easy installation"
+  },
+  {
+    imgDesc: modelName + '-grid2-desc.jpg',
+    imgMob: modelName + '-grid2-mob.jpg',
+    title: "Elastic protective pads"
+  },
+  {
+    imgDesc: modelName + '-grid3-desc.jpg',
+    imgMob: modelName + '-grid3-mob.jpg',
+    title: "Wide adjustment range 8-42 cm"
+  },
+  {
+    imgDesc: modelName + '-grid4-desc.jpg',
+    imgMob: modelName + '-grid4-mob.jpg',
+    title: "Multiple VESA mounting options"
+  },
+  {
+    imgDesc: modelName + '-grid5-desc.jpg',
+    imgMob: modelName + '-grid5-mob.jpg',
+    title: "Compatible with PC monitors"
+  },
+  {
+    imgDesc: modelName + '-grid6-desc.jpg',
+    imgMob: modelName + '-grid6-mob.jpg',
+    title: "Install the tamper proof screw* for extra protection against TV theft"
+  }
+]-%}
+
+{#- section.grid-layout
+  each item in itemsGrid
+    div(class='grid-layout__grid-item grid-item')
+      +images(item.imgMob, item.imgDesc, 'full-img__img', item.title)
+      h5.grid-item__title !{item.title} -#}
+
+<section class="grid-layout">
+  {%- for item in items -%}
+    <div class="grid-layout__grid-item grid-item">
+      {{ macro.image(item.imgDesc, item.imgMob, item.title, 'full-img__img') }}
+      {#- {%- if item.title -%}
+        <h5 class="grid-item__title">{{ item.title | safe }}</h5>
+      {%- endif -%} -#}
+    </div>
+  {%- endfor -%}
+</section>

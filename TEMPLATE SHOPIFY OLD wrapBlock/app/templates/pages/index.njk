@@ -1,0 +1,86 @@
+{%- import "./components/macro.njk" as macro with context -%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>{{ modelName }}</title>
+  </head>
+  <body>
+    <div class="main-content-container">
+      <div id="content-layout">
+        {%- include "./blocks/header.njk" -%}
+        <section class="full-img ">
+          {{ macro.image(modelName + '-block1-desc.jpg', modelName + '-block1-desc.jpg', "Exhibition", 'full-img__img') }}
+        </section>
+        {% include "./blocks/grid-layout.njk" %}
+<section class="full-img">
+          {{ macro.image(modelName + '-block2-desc.jpg', modelName + '-block2-desc.jpg', "Best quality at affordable prices", 'full-img__img') }}
+        </section>
+        <section class="full-img wrapBlock">
+          {{ macro.image(modelName + '-block3-desc.jpg', modelName + '-block3-desc.jpg', "Training center", 'full-img__img') }}
+          {{ macro.image(modelName + '-block4-desc.jpg', modelName + '-block4-desc.jpg', "Home", 'full-img__img') }}
+
+        </section>
+       
+        <section class="full-img">
+          {{ macro.image(modelName + '-block5-desc.jpg', modelName + '-block5-desc.jpg', "Best quality at affordable prices", 'full-img__img') }}
+        </section>
+      
+        
+        {#-
+                <section class="full-img">
+                  {{ macro.image(modelName + '-block4-desc.jpg', modelName + '-block4-desc.jpg', "Практично для бизнеса", 'full-img__img') }}
+                  <div class="full-img__content-box content-box-block4 start bottom">
+                    <h4 class="content-box__title">Помощник<br>вашего<br>бизнеса</h4>
+                  </div> 
+                </section>
+        
+                <section class="full-img">
+                  {{ macro.image(modelName + '-block5-desc.jpg', modelName + '-block5-desc.jpg', "Информативно для медучреждений", 'full-img__img') }}
+                  <div class="full-img__content-box content-box-block5 start bottom">
+                    <h4 class="content-box__title">Будьте<br>заметными</h4>
+                  </div> 
+                </section>
+               
+                <section class="full-img">
+                  {{ macro.image(modelName + '-block6-desc.jpg', modelName + '-block6-desc.jpg', "Можно доверить самое ценное", 'full-img__img') }}
+                  <div class="full-img__content-box content-box-block6 start top">
+                    <h4 class="content-box__title">Можно<br>доверить<br>самое<br>ценное</h4>
+                  </div>
+                </section>
+        
+                <section class="full-img">
+                  {{ macro.image(modelName + '-block7-desc.jpg', modelName + '-block7-desc.jpg', "Стойка мечты в паре кликов от вас!", 'full-img__img') }}
+                  <div class="full-img__content-box content-box-block7 end center-vertical">
+                    <h4 class="content-box__title">Стойка мечты<br>в паре кликов<br>от вас!</h4>
+                  </div>
+                </section>
+                
+                {% include "./blocks/grid-layout.njk" %}
+        
+                {% include "./blocks/grid-layout6.njk" %}
+        
+                <section class="full-img">
+                  {{ macro.image(modelName + '-block1-desc.jpg', modelName + '-block1-desc.jpg', headerTitle, 'full-img__img') }}
+                  <div class="full-img__content-box content-box end center-vertical">
+                    <h4 class="content-box__title">Лучшее качество по доступной цене</h4>
+                    <ul class="content-box__list list">
+                      <li class="list__item">Пригодится для различных мероприятий: конференции, реклама, встречи, обучение</li>
+                      <li class="list__item">Удобные полки и система кабель-менеджмента помогают организовать пространство для любых ваших
+                        бизнес идей</li>
+                      <li class="list__item">Высококачественная сверхпрочная стальная конструкция с 5-летней гарантией для больших ТВ и
+                        интерактивных дисплеев</li>
+                    </ul>
+                  </div>
+                </section>
+        
+                <section class="full-img">
+                  {{ macro.image(modelName + '-block2-desc.jpg', modelName + '-block2-desc.jpg', headerTitle, 'full-img__img') }}
+                </section>
+                -#}
+      </div>
+    </div>
+  </body>
+</html>
