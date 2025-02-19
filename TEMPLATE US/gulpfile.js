@@ -32,11 +32,12 @@ function cleanHtml() {
 }
 
 function images() {
-  return src("app/assets/images/src/*.*")
+  return src("app/assets/images/src/1x/*.*")
     .pipe(newer("app/assets/images/dist"))
-    .pipe(webp({
-      quality: 75,
-    }))
+    .pipe(imagemin([
+      imagemin.mozjpeg({ quality: 75, progressive: true }),
+      imagemin.optipng({ optimizationLevel: 5 }),
+    ]))
     .pipe(dest("app/assets/images/dist"));
 }
 

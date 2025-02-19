@@ -28,13 +28,13 @@
 
 <section class="layout-header">
   {{ macro.image(modelName + '-header-desc.webp', modelName + '-header-mob.webp', headerTitle, 'layout-header__img') }}
-  <div class="layout-header__content-wrap">
-    {#- 
+ {#- <div class="layout-header__content-wrap">
+     
      <img class="layout-header__logo" src="{{ headerLink + 'onkron.svg' }}" alt="onkron"/>
     <p class="layout-header__title">{{ headerTitle|safe }}</p> 
-     <p class="layout-header__subtitle"> - умные решения на каждый день</p> -#}
+     <p class="layout-header__subtitle"> - умные решения на каждый день</p> 
 
-    {% include "./icons.njk" %}
+    {% include "./icons.njk" %} 
 
-  </div>
+  </div>  -#}
 </section>

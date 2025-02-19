@@ -308,7 +308,7 @@ h1, h2, h3, h4, h5, span, p, ul {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  gap: 12px;
+  gap: 3rem;
   margin: 1% 0 !important;
 }
 .grid-layout__grid-item {
@@ -329,7 +329,7 @@ h1, h2, h3, h4, h5, span, p, ul {
   color: #fff;
   -webkit-box-flex: 2;
       -ms-flex: 2 40%;
-          flex: 2 40%;
+          flex: 3 30%;
 }
 @media screen and (max-width: 480px) {
   .grid-layout__grid-item {
@@ -398,7 +398,15 @@ h1, h2, h3, h4, h5, span, p, ul {
   line-height: 1;
   font-weight: 600;
 }
+@media screen and (max-width: 1042px) {
+  .grid-layout {
+    gap: 2rem;
+  }
+}
 @media screen and (max-width: 768px) {
+  .grid-layout {
+    gap: 1rem;
+  }
   .grid-layout6 {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
