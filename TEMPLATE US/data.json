@@ -1,7 +1,7 @@
 {
   "lang": {
-    "us": false,
-    "uk": true,
+    "us": true,
+    "uk": false,
     "ru": false,
     "fr": false,
     "de": false,
@@ -9,7 +9,7 @@
     "it": false,
     "pl": false
   },
-  "modelName": "d421e-b",
+  "modelName": "ts1220-w",
   "folderName": "n2l-b-imgs/",
   "links": {
     "ruIcons": "https://shop.onkron.ru/images/content/new_listings/icons/",
