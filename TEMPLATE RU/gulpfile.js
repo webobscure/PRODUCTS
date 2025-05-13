@@ -14,7 +14,7 @@ const htmlbeautify = require("gulp-html-beautify");
 const imageminWebp = require('imagemin-webp');
 const webp = require("gulp-webp");
 const newer = require("gulp-newer");
-
+const svgmin = require('gulp-svgmin');
 function browsersync() {
   browserSync.init({
     server: {
