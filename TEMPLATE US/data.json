@@ -2,14 +2,9 @@
   "lang": {
     "us": false,
     "uk": true,
-    "ru": false,
-    "fr": false,
-    "de": false,
-    "es": false,
-    "it": false,
-    "pl": false
+    "ru": false
   },
-  "modelName": "m6l-b",
+  "modelName": "g100-w",
   "folderName": "n2l-b-imgs/",
   "links": {
     "ruIcons": "https://shop.onkron.ru/images/content/new_listings/icons/",

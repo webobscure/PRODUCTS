@@ -1,0 +1,51 @@
+
+{%- set icons = [
+  {
+    img: 'fabric-icon.svg',
+    title: 'Własna <br> produkcja'
+  },
+  {
+    img: 'world-icon.svg',
+    title: 'Przedstawicielstwa <br> na całym świecie'
+  },
+  {
+    img: 'stand-icon.svg',
+    title: 'Miliony sprzedanych <br>uchwytów'
+  },
+  {
+    img: 'innovatives-icon.svg',
+    title: 'Centrum innowacyjne <br>do rozwoju produktów'
+  },
+  {
+    img: 'award-icon.svg',
+    title: "Wieloetapowa <br> kontrola jakości"
+  }
+] -%}
+
+<ul class="layout-icons">
+  {%- for icon in icons -%}
+    <li class="layout-icons__item">
+      <div class="item__img-wrapper">
+        {%- if lang.ru -%}
+          <img src="{{ links.ruIcons + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />
+        {% elif lang.us %}
+          <img src="{{ links.us + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />
+        {% elif lang.uk %}
+          <img src="{{ links.uk + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />
+        {% elif lang.it %}
+          <img src="{{ links.it + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />
+        {% elif lang.es %}
+          <img src="{{ links.es + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />
+        {% elif lang.de %}
+          <img src="{{ links.de + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />
+        {% elif lang.pl %}
+          <img src="{{ links.pl + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />  
+        {%- else -%}
+          <img src="{{ links.fr + icon.img }}" class="item__img" alt="{{ icon.title | safe | replace('<br>',' ') }}" />
+        {%- endif -%}
+      </div>
+      <h3 class="item__title">{{ icon.title | safe }}</h3>
+      {#- <span class="item__desc">{{ icon.desc | safe }}</span> -#}
+    </li>
+  {%- endfor -%}
+</ul>
