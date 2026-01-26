@@ -24,10 +24,10 @@
   </section> -#}
 <section class="layout-header">
   {{ macro.image(modelName + '-header-desc.jpg', modelName + '-header-mob.jpg', headerTitle, 'layout-header__img') }}
-  <div class="layout-header__content-wrap">
-    {#-<img class="layout-header__logo" src="{{ headerLink + 'onkron.svg' }}" alt="onkron"/>
+  {#-<div class="layout-header__content-wrap">
+    <img class="layout-header__logo" src="{{ headerLink + 'onkron.svg' }}" alt="onkron"/>
     <p class="layout-header__title">{{ headerTitle|safe }}</p>
      <p class="layout-header__subtitle"> - умные решения на каждый день</p> -#}
-    {% include "./icons.njk" %}
-  </div>
+    {#- {% include "./icons.njk" %} 
+  </div>-#}
 </section>

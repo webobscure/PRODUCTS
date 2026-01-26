@@ -32,7 +32,7 @@ function cleanHtml() {
 }
 
 function images() {
-  return src("app/assets/images/src/*.*")
+  return src("app/assets/images/src/1x/*.*")
     .pipe(newer("app/assets/images/dist"))
     .pipe(imagemin([
       imagemin.mozjpeg({ quality: 75, progressive: true }),

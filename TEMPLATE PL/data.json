@@ -1,15 +1,12 @@
 {
   "lang": {
-    "us": false,
-    "uk": false,
-    "ru": false,
-    "fr": false,
-    "de": false,
-    "es": false,
-    "it": false,
     "pl": true
   },
+<<<<<<< HEAD
   "modelName": "d208fs-b",
+=======
+  "modelName": "g100-w",
+>>>>>>> 504ffe7cb780b479c27c69506961537b7645f6ca
   "folderName": "n2l-b-imgs/",
   "links": {
     "ruIcons": "https://shop.onkron.ru/images/content/new_listings/icons/",

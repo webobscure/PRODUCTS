@@ -9,8 +9,13 @@
     "it": false,
     "pl": false
   },
+<<<<<<< HEAD
   "modelName": "d208fs-b",
   "folderName": "d208fs-b-imgs/",
+=======
+  "modelName": "g80-b-vp",
+  "folderName": "g80-b-vp-imgs/",
+>>>>>>> 504ffe7cb780b479c27c69506961537b7645f6ca
   "links": {
     "ruIcons": "https://shop.onkron.ru/images/content/new_listings/icons/",
     "us": "https://cdn.shopify.com/s/files/1/2223/8189/files/",

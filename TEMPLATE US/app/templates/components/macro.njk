@@ -18,6 +18,6 @@
 {%- macro image(imgDesc, imgMob, alt, class) -%}
   <picture>
     <source srcset="{{ imgLink + imgMob }}" media="(max-width: 480px)"/>
-    <img class="{{ class }}" src="{{ imgLink + imgDesc }}" alt="{{ alt | safe | replace('<br>',' ') }}"  title="{{ alt | safe | replace('<br>',' ') }}"/>
+    <img class="{{ class }}" src="{{ imgLink + imgDesc }}" alt="{{ alt | safe | replace('<br>',' ') }}"  title="{{ alt | safe | replace('<br>',' ') }}" loading="lazy" />
   </picture>
 {%- endmacro -%}

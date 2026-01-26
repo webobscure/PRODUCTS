@@ -14,7 +14,7 @@ const htmlbeautify = require("gulp-html-beautify");
 const imageminWebp = require('imagemin-webp');
 const webp = require("gulp-webp");
 const newer = require("gulp-newer");
-
+const svgmin = require('gulp-svgmin');
 function browsersync() {
   browserSync.init({
     server: {
@@ -32,7 +32,7 @@ function cleanHtml() {
 }
 
 function images() {
-  return src("app/assets/images/src/*.*")
+  return src("app/assets/images/src/1x/*.*")
     .pipe(newer("app/assets/images/dist"))
     .pipe(webp({
       quality: 75,
